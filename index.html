@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+    <title>Enterprise Architecture</title>
+
+    <style>
+        @import url(css/style.css);
+    </style>
+</head>
+<body>
+<button class="headerbuttons lightdark toggler">light</button>
+<select class="date-select"></select>
+<input class="headerbuttons selFile  lightdark" type="file" id="myfile" name="myfile" onchange="readURL(this);">
+<button class="headerbuttons inputbutton  lightdark" title="import csv file">Import</button>
+<button class="headerbuttons resetbutton lightdark" title="reset to original dataset ">Reset</button>
+
+<a href="0" id="exportbutton">
+    <button class="headerbuttons exportbutton lightdark" title="export as csv">Export</button>
+</a>
+
+<div class="svgContainer">
+</div>
+<div class="tooltip">
+
+</div>
+
+<img class="giticon"
+     src="css/icons/github.svg"
+     alt="Download src code"
+/>
+<div class="gitbutton">Get the Source Code</div>
+</body>
+<!-- load the d3.js library -->
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+    d3.select(".toggler").on("click", function () {
+        toggleStyle()
+    })
+    var colors = ["rgba(114,229,239,.9)", "rgba(118,204,108,9)", "rgba(221,142,235,.9)", "rgba(185,246,23,.9)", "rgba(253,137,146,.9)", "rgba(54,229,21,.9)", "rgba(140,171,234,.9)", "rgb(242,231,33)", "rgb(252,143,59)", "rgb(191,205,142)"];
+    var indicator_colors = ["rgba(200,200,200,.9)", "rgba(0,100,0,.9)", "rgba(50,250,50,.9)", "rgba(200,200,0,.9)", "rgba(50,50,255,.9)"];
+    var legend_array = [];
+    var tooltip = d3.select(".tooltip")
+    var closebtn = d3.selectAll(".close")
+    var font_size = 10;
+    var char_width = font_size * .5;
+    var row_height = font_size * 2;
+    var is_open = false
+    var width, height
+    function toggleStyle() {
+
+        style_option = !style_option;
+
+        d3.select(".lightdark")
+            .html(function () {
+                let tx = !style_option ? "light" : "dark"
+                return tx;
+            })
+
+        d3.select("body")
+            .classed("darkish", function () {
+                return style_option;
+            })
+
+        d3.select(".exportbutton")
+            .classed("darkish", function () {
+                return style_option;
+            })
+
+    }
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var myEfficientFn = debounce(function () {
+
+        addTreeView(jsonData);
+
+    }, 250);
+
+
+    window.addEventListener('resize', myEfficientFn);
+
+    closebtn.on("click", function () {
+        hidePopups();
+        showTooltip()
+    })
+    tooltip.on("mouseleave", function () {
+        showTooltip()
+    })
+
+
+    var getcolor = function (i) {
+        if (i < 0) {
+            i = colors.length - i
+        }
+        i = i % 10;
+        return colors[i]
+    }
+
+    function openURL(u) {
+        window.open(u, "_blank")
+    }
+
+    function showTooltip(d) {
+        tooltip.selectAll("span").remove()
+        tooltip.style("left", "-4000px")
+            .style("opacity", 0)
+        tooltip.selectAll("button").remove()
+
+        let x = width * .95
+        let y = height * .15
+        let to = 8000
+
+        if (d) {
+            if(d3.event) {
+                d3.event.preventDefault();
+                x = d3.event.pageX
+                y = d3.event.pageY
+                to = 6000
+            }
+
+            let pos = [x, y - 80];
+
+            //let ttb = tooltip.append("button")
+            //    .classed("close", true)
+             //   .attr("aria-label", "Close")
+                //.append("span")
+                //.attr("aria-hidden", true).html("&times;")
+
+            //ttb.on("click", function () {
+            //    showTooltip()
+            //})
+
+            tooltip.append("span")
+                .classed("tool-content", true)
+                .html(d)
+
+            tooltip.style("top", pos[1] + "px")
+                .style("left", pos[0] + 20 + "px")
+
+            tooltip.transition()
+                .duration(4)
+                .style("opacity", 1)
+
+            setTimeout(function () {
+                showTooltip()
+            }, to)
+
+        } else {
+            return
+        }
+
+    }
+
+    d3.select(".gitbutton")
+        .on("click",function(){
+            window.open("https://github.com/alQemist/sitemap","_blank")
+        })
+</script>
+
+<script src="js/api.js"></script>
+<script src="js/tree.js"></script>
+<script src="js/read_file.js"></script>
+
+
+
+
