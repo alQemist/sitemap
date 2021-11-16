@@ -67,7 +67,7 @@ function getJsonData(d) {
             addTreeView(timelineData)
         })
 
-        dates.reverse()
+        //dates.reverse() uncomment to show most recent site map initially
         dates.forEach(function (o, i) {
         ds.append("option")
             .html(o)
