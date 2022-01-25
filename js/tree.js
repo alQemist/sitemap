@@ -372,7 +372,7 @@ function addTreeView(td) {
             .classed("nodebg", true)
             .attr("x", function(d){
                 let w = (d.name).length *char_width + 50
-                let x = d.depth <= 1 ? (w * -.5) +12 : -12
+                let x = d.depth <= 0 ? (w * -.5) +12 : -12
                 return x
             })
             .attr("y", -12)
@@ -447,7 +447,7 @@ function addTreeView(td) {
             })
             .style("font-family","Helvetica")
             .style("text-anchor", function (d) {
-                let ta = d.depth > 1 ? "start" : "middle";
+                let ta = d.depth > 0 ? "start" : "middle";
                 return ta
             })
 
@@ -458,7 +458,7 @@ function addTreeView(td) {
         var nodeUpdate = node.transition()
             .duration(duration)
             .attr("transform", function (d) {
-                let ro = d.depth > 1  ? " rotate(90)" : ""
+                let ro = d.depth > 0  ? " rotate(90)" : ""
                 return "translate(" + d.x + "," + d.y + ")" + ro;
             })
 

@@ -14,7 +14,7 @@
       "data": [
         {
           "parent": "",
-          "name": "Login",
+          "name": "Enterprise",
           "type": "domain",
           "links": "",
           "description": "Primary domain of DME-CG organization providing governance over all other domains",
@@ -310,7 +310,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Business Operations",
           "type": "subdomain",
           "links": "",
@@ -319,7 +319,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Customer Services",
           "type": "subdomain",
           "links": "",
@@ -328,7 +328,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Engineering",
           "type": "subdomain",
           "links": "",
@@ -337,7 +337,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Finance",
           "type": "subdomain",
           "links": "",
@@ -346,7 +346,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Healthcare Facility",
           "type": "subdomain",
           "links": "",
@@ -355,7 +355,7 @@
           "implemented": null
         },
         {
-          "parent": "Login",
+          "parent": "Enterprise",
           "name": "Human Resources",
           "type": "subdomain",
           "links": "",
@@ -364,7 +364,7 @@
           "implemented": null
         },
         {
-          "parent": "Login Architecture Governance",
+          "parent": "Enterprise Architecture Governance",
           "name": "Architectural Change Management",
           "type": "capability",
           "links": "https://dmecg.aha.io/initiatives/GRY-S-7",
@@ -373,7 +373,7 @@
           "implemented": "1"
         },
         {
-          "parent": "Login Architecture Governance",
+          "parent": "Enterprise Architecture Governance",
           "name": "Document Management",
           "type": "capability",
           "links": "",
@@ -382,16 +382,16 @@
           "implemented": null
         },
         {
-          "parent": "Login Architecture Governance",
+          "parent": "Enterprise Architecture Governance",
           "name": "EAG",
           "type": "application",
           "links": "",
-          "description": "Modeling and Documentation tool used for Login Architecture",
+          "description": "Modeling and Documentation tool used for Enterprise Architecture",
           "state": "0",
           "implemented": "1"
         },
         {
-          "parent": "Login Architecture Governance",
+          "parent": "Enterprise Architecture Governance",
           "name": "Portfolio Management",
           "type": "capability",
           "links": "https://dmecg.aha.io/initiatives/GRY-S-8",
@@ -404,7 +404,7 @@
           "name": "Financial Management",
           "type": "capability",
           "links": "https://dmecg.aha.io/epics/GRY-E-23,https://dmecg.aha.io/features/GRY-91",
-          "description": "Ability to govern the financial activities of the Login and establish the requirements for systems,services, and processes which control and manage finance activities.",
+          "description": "Ability to govern the financial activities of the Enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
           "state": "0",
           "implemented": null
         },
@@ -626,10 +626,10 @@
         },
         {
           "parent": "Information Systems Management",
-          "name": "Login Architecture Governance",
+          "name": "Enterprise Architecture Governance",
           "type": "capability",
           "links": "https://dmecg.aha.io/initiatives/ITINFR-S-3",
-          "description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the Login.",
+          "description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the Enterprise.",
           "state": "0",
           "implemented": "1"
         },
@@ -675,24 +675,527 @@
     {
       "date": "2021-11-02",
       "data": [
-        {
-          "parent": "",
-          "name": "Login",
-          "type": "domain",
-          "links": "",
-          "description": "Primary domain of DME-CG organization providing governance over all other domains",
-          "state": "3",
-          "implemented": null
-        },
-        {
-          "parent": "Login",
-          "name": "Business Operations",
-          "type": "subdomain",
-          "links": "",
-          "description": "Directing business operations in order to deliver quality services ",
-          "state": "3",
-          "implemented": null
-        }]
+          {
+            "parent": "",
+            "name": "Enterprise",
+            "type": "domain",
+            "description": "Primary domain of DME-CG organization providing governance over all other domains",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Analytics",
+            "name": "Chief Analytics Officer",
+            "type": "persona",
+            "description": "The chief analytics/data office oversees a range of data-related functions that may include data management, ensuring data quality and creating data strategy. Responsible for data analytics and business intelligence, the process of drawing valuable insights from data and to evolve and govern our data platform and analytics strategy to provide insight into business decisions and improve customer experience. Works closely with stakeholders across the company to expand our data assets and build platforms to make that data more accessible. The successful candidate will have a proven track record leading product and engineering organizations as well as demonstrated commercial acumen.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Business Operations",
+            "name": "Chief Operations Officer",
+            "type": "persona",
+            "description": "The goal of the COO position is to secure the functionality of business to drive extensive and sustainable growth.The COO role is a key member of the senior management team, reporting only to the Chief Executive Officer (CEO).Responsibilities: \n - Designing and implementing business operations\n - Establishing policies that promote company culture and vision\n - Overseeing operations of the company and the work of executives\n - Business Development in order to both grow the company in the present, but more important to develop a business development team",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Business Operations",
+            "name": "Client Services Manager",
+            "type": "persona",
+            "description": "The Customer Services Manager facilitates the efficient operation of the assigned department by performing a variety of clerical and administrative tasks.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Business Operations",
+            "name": "Client Services Specialist",
+            "type": "persona",
+            "description": "The Customer Services Specialist facilitates the efficient operation of the assigned department by performing a variety of clerical and administrative tasks.  The Customer Services Specialist is responsible for daily oversight of the functions of the assessment process, to support health plan requests and support therapists/reviewers.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Business Operations",
+            "name": "Vendor (direct)",
+            "type": "persona",
+            "description": "Supplier or Vendor providing goods or services directly to Periscope",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer",
+            "name": "Clinical Reviewer Journey",
+            "type": "journey",
+            "description": "Reports to National Director. Responsible for review and executive summary write-up for each in-home assessment, tele-health session, or chart review.  Will attend state fair hearings.  Will work with Field clinicians in any necessary format to improve work product, clarification, and training both at the granular/request level and in support of company initiatives.",
+            "state": "0",
+            "url": "https://test.dme-cg.com/reports/pdf/ea/journey/persona/Clinical%20Reviewer%20Journey/1/0/11/?ts=1623005570&;amp;sig=ubR0oQ%2F7TjfZyjbhH%2FJGavHD9T8%3D"
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Acrobat Professional",
+            "type": "application",
+            "description": "PDF creation and editing tool",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "AWS Workspace",
+            "type": "application",
+            "description": "Used to run Filemaker client to connect to the server much faster",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Google Chrome",
+            "type": "application",
+            "description": "Internet Browser",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Legacy System",
+            "type": "application",
+            "description": "Client Application running on Windows and MacOS",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Office 365",
+            "type": "application",
+            "description": "Email, Word, Excel",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Periscope Legacy System",
+            "type": "application",
+            "description": "Master Business Application",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Sharepoint",
+            "type": "application",
+            "description": "Enterprise Internal Website",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Teams",
+            "type": "application",
+            "description": "Internal Collaboration Tool",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Reviewer Journey",
+            "name": "Zoom",
+            "type": "application",
+            "description": "Video Conferencing",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Chief Medical Officer",
+            "type": "persona",
+            "description": "The CMO works with the company executive team to develop and facilitate execution of the company vision and strategy.  The CMO plays a key role in the management of current state and the development of new opportunities with current clients.  Additionally, identification of  prospective opportunities and customers with the CEO and COO as well as oversight of the clinical and IT team and facilitation and ensure effective delivery of the service.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Clinical National Director",
+            "type": "persona",
+            "description": "Reports to C-level Team.  Responsible to understand the vision and strategy of the company and effectively communicating the vision and strategy to the clinical team.  Identifies challenges to the delivery system and works with leadership to develop solutions.  Identifies top performers and works to position them for future opportunities.  Monitor key legislative national and regional initiatives/changes and develop a communication and training strategy to address national and regional legislative changes, which impact our service delivery.  Coordinate clinical webinar strategy for both National Reviewer and Clinical Teams and work with Clinical Trainers on training.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Clinical Regional Director",
+            "type": "persona",
+            "description": "Reports to National Director and CMO.  Works with ND and CMO Responsible to understand the vision and strategy of the company and effectively communicating the vision and strategy to their regional clinical team.  Identifies challenges to the delivery system and works with leadership to develop solutions.  Identifies top performers within region and works to position them for future opportunities.  Monitor key legislative initiatives/changes and develop a communication and training strategy to address  regional legislative changes, which impact our service delivery.  Coordinate clinical webinar strategy for both National Reviewer and Clinical Teams and work with Clinical Trainers on training.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Clinical Reviewer",
+            "type": "persona",
+            "description": "Reports to National Director. Responsible for review and executive summary write-up for each in-home assessment, tele-health session, or chart review.  Will attend state fair hearings.  Will work with Field clinicians in any necessary format to improve work product, clarification, and training both at the granular/request level and in support of company initiatives.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Clinical State Champion",
+            "type": "persona",
+            "description": "Reports to Regional Director and ND; CMO as needed.  Responsible to understand the vision and strategy of the company and effectively communicate the vision and strategy to their state clinical team.Identifies challenges to the delivery system and works with leadership to develop solutions.Identifies top performers within region and works to position them for future opportunities.Monitor key legislative initiatives/changes and develop a communication and training strategy to address  state legislative changes, which impact our service delivery.  Coordinate clinical webinar strategy for both National Reviewer and Clinical Teams and work with Clinical Trainers on training.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Clinical Trainer",
+            "type": "persona",
+            "description": "Overlap Position reports to C-Level Team to develop training and learning management strategy (LMS).  Works directly with entire Clinical Team to develop content and monitors uptake, progress of LMS.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Clinical Services",
+            "name": "Field Clinician",
+            "type": "persona",
+            "description": "Reports directly to State Champion; Regional Director when necessary.  Is assigned in-home/on-site assessments.  Is responsible to maintain and update their account record in a timely fashion, which items related to Payroll, Contact, Compliance, etc. Is reposnsible to communicate with our customer service specialists regarding availability and challenges regarding assignments.  Must adhere to client mandated timelines when accepting a request for their service.  ",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Direct To Consumer",
+            "name": "Caregiver / Client",
+            "type": "persona",
+            "description": "Individual may view available services\rRequest available services\rTrack Progress of requested/scheduled/provided services\rView and download final reports\rCommunicate with client support services\rPay for Services",
+            "state": "1",
+            "url": ""
+          },
+          {
+            "parent": "Direct To Consumer",
+            "name": "Member/Caregiver",
+            "type": "persona",
+            "description": "Ability to login and scheduled date, status of their specific request and submit time and date stamped communication to our customer service specialist team.",
+            "state": "1",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Chief Data Officer",
+            "type": "persona",
+            "description": "Responsible for Data Governance strategy and implementation of formalized Data Governance Framework",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Chief Information Officer",
+            "type": "persona",
+            "description": "Responsibilities\r\u000b - Setting objectives and strategies for the IT department\r\u000b - Selecting and implementing suitable technology to streamline all internal operations and help optimize their strategic benefits\r\u000b - Designing and customizing technological systems and platforms to improve customer experience\r\u000bThe responsibiltiy is to ensure that information technology adds the maximum value to our company so as to facilitate the success of our business.\r\u000b\r\u000bGoals\r\u000b-Create high performing, cross-functional teams in four disciplines: Development, Engineeering, Customer Care and Operations\r\u000b-Ensure technology stack and resources support ever-changing business goals related to revenue, product, growth, capabilities and customer value.\r\u000b-Create and adhere to compliance laws and policies that impact security, privacy and business processes\r\u000b-Design 5 IT processes to facilitate service delivery, technical support, operations and maintenance.\r\u000b-Maintain stewardship of all IT related assets and resources by focusing on cost containment and high quality services while increasing IT capabilities.\r\u000b\r\u000bLikes\r\u000bFunctional processes that help internal and external customers.\r\u000bSelf-organized team members that think ahead\r\u000bTeam members that follow policy and process\r\u000bTransparency with work, agile, devops and happy people\r\u000b\r\u000bDislikes\r\u000bKnowitall people that interupt others, that don't listen and have negative outlook\r\u000bTeam members that don't follow process and policy\r\u000bData-driven decisions without the data\r\u000b",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Customer Care",
+            "type": "persona",
+            "description": "?",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Data Analytics Engineer",
+            "type": "persona",
+            "description": "Responsible for performing data analysis and providing access to reports and visualizations",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Enterprise Architect",
+            "type": "persona",
+            "description": "Charged with managing EA documentation and translating the resulting intelligence into actual IT Architecture using TOGAF methodology",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Network Engineer",
+            "type": "persona",
+            "description": "?",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Software Engineer",
+            "type": "persona",
+            "description": null,
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "System Admin",
+            "type": "persona",
+            "description": "Administrator for the System and Configurations",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Engineering",
+            "name": "Technical Support",
+            "type": "persona",
+            "description": "Technical staff supporting users or technical systems",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Analytics",
+            "type": "subdomain",
+            "description": "Governs all internal data analysis and research capabilities",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Business Operations",
+            "type": "subdomain",
+            "description": "Directing business operations in order to deliver quality services ",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Chief Executive Officer",
+            "type": "persona",
+            "description": "Set the overarching strategy and direction of the organization.  Meets regularly with the executive team to inform strategic decisions as they relate to Financial Decisions, Business Development, Customer Care, HR, Clinical Training and development, and IT",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Clinical Services",
+            "type": "subdomain",
+            "description": "Portfolio of Services provided by our company",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Direct To Consumer",
+            "type": "subdomain",
+            "description": "Individuals who independently request our services",
+            "state": "1",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Engineering",
+            "type": "subdomain",
+            "description": "Information Technology, Security, Application Development and Support",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "External Domains",
+            "type": "subdomain",
+            "description": "All External Domains",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Finance",
+            "type": "subdomain",
+            "description": "Governance for Finance and Accounting",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Health Plan",
+            "type": "subdomain",
+            "description": "Healthcare Providers (External Business Stakeholders)",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Human Resources",
+            "type": "subdomain",
+            "description": "Human Resources Department",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Enterprise",
+            "name": "Member",
+            "type": "subdomain",
+            "description": "The individuals which are the subjects of our services",
+            "state": "1",
+            "url": ""
+          },
+          {
+            "parent": "External Domains",
+            "name": "Doctor",
+            "type": "persona",
+            "description": "Medical Doctor which examine Members covered under the HealthPlan Insurance",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "External Domains",
+            "name": "State Fair Judge",
+            "type": "persona",
+            "description": "Administrative Law Judge charged with adjudicating an appeal for a member who has been denied coverage based on a third party Clinical Assessment",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "External Domains",
+            "name": "Vendor (indirect)",
+            "type": "persona",
+            "description": "Providers of devices or equipment prescribed for a member of a HealthPlan's patient network",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Finance",
+            "name": "Accounting Manager",
+            "type": "persona",
+            "description": "The Accounting manager is responsible for daily oversight of financial matters and accounting functions of the company.This leadership also engages with senior leadership to make policy recommendations and ensures that the company's financial health is protected by adherence to those polices as well as external guidance and adherence to Generally Accepted Accounting Principles (GAAP).This position also includes a part time schedule as one of the members of the customer services team.The administrative team facilitates the efficient operation of the assigned department by performing a variety of clerical and administrative tasks.Responsibilities:- Daily cash posting and oversight bank reconciliations\n - Accounts receivable management and oversight \n - Financial reports and insights on accounting matters\n - Timely communications to company's senior leadership about trends as well as matters of concern. Provide administrative support on the West Coast for the admin team.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Finance",
+            "name": "Bookeeping",
+            "type": "persona",
+            "description": "The Bookkeeper's responsibilities are to accurately record all day-to-day financial transactions of our company:Record day to day financial transactions and complete the posting process\n - Verify that transactions are recorded in the correct day book, suppliers ledger, customer ledger and general ledger\n - Bring the books to the trial balance stage\n - Enter data, maintain records and create reports and financial statements\n - Evenutally, process accounts receivable/payable and handle payroll in a timely manner\n - Eventually complete tax forms",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Finance",
+            "name": "Chief Financial Officer",
+            "type": "persona",
+            "description": "As part of an executive management team, the CFO will have interaction with various members of a company, both senior and junior.Responsibilities:\n - Providing leadership, direction and management of the finance and accounting team\n - Providing strategic recommendations to the CEO and members of the executive management team\n - Managing the processes for financial forecasting and budgets, and overseeing the preparation of all financial reporting\n - Advising on long-term business and financial planning\n - Reviewing all formal finance, HR and IT related procedures",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP Champion",
+            "type": "persona",
+            "description": "Responsible for:\n - Liaising with our company management and training teams\n - Training their staff\n - Creating, request activation, deleting their staff from our system\n - Re-assigning assessments from deleted staff to active staff\n - Update information related to routing of routine functions (invoices, statistical/outcomes reports, clinical reports)",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP Executive",
+            "type": "persona",
+            "description": "High-level ",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP Finance",
+            "type": "persona",
+            "description": "Responsibility is to search, view, monitor invoices (amount owed, balance, and payments)",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP Manager",
+            "type": "persona",
+            "description": "Responsible for oversight of subordinates, thus a performance dashboard of HP Manager subordinates as well as key metrics on our service execution is key.  This individual will have visibility / access to all functions of subordinates.",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP Medical Director",
+            "type": "persona",
+            "description": null,
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "HP User",
+            "type": "persona",
+            "description": "Responsibility is to Enter requests for service, upload supporting documents, track request progress, communicate with our support and clinical staff",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Health Plan",
+            "name": "Member",
+            "type": "persona",
+            "description": "Member who has insurance coverage through Health Plan Insurance, directly or indirectly such as Medicare, Medicaid",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "HP Executive",
+            "name": "HP Executive Journey",
+            "type": "journey",
+            "description": "High-level ",
+            "state": "0",
+            "url": "https://test.dme-cg.com/reports/pdf/ea/journey/persona/HP%20Executive%20Journey/1/0/29/?ts=1623005570&;amp;sig=ubR0oQ%2F7TjfZyjbhH%2FJGavHD9T8%3D"
+          },
+          {
+            "parent": "HP Executive Journey",
+            "name": "Google Chrome",
+            "type": "application",
+            "description": "Internet Browser",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "HP Executive Journey",
+            "name": "Periscope Legacy System",
+            "type": "application",
+            "description": "Master Business Application",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "HP Manager",
+            "name": "HP Manager Journey",
+            "type": "journey",
+            "description": "Responsible for oversight of subordinates, thus a performance dashboard of HP Manager subordinates as well as key metrics on our service execution is key.  This individual will have visibility / access to all functions of subordinates.",
+            "state": "0",
+            "url": "https://test.dme-cg.com/reports/pdf/ea/journey/persona/HP%20Manager%20Journey/1/0/54/?ts=1623005570&;amp;sig=ubR0oQ%2F7TjfZyjbhH%2FJGavHD9T8%3D"
+          },
+          {
+            "parent": "Human Resources",
+            "name": "Benefits Manager",
+            "type": "persona",
+            "description": "Responsibilities for performing all tasks associated all functions related to HR.  ",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "Human Resources",
+            "name": "Director of Human Resources",
+            "type": "persona",
+            "description": "Responsibilities for procuring all benefits options, interfacing with Payroll company, and managing all functions related to HR.  ",
+            "state": "0",
+            "url": ""
+          },
+          {
+            "parent": "System Admin",
+            "name": "System Admin Journey",
+            "type": "journey",
+            "description": "Administrator for the System and Configurations",
+            "state": "0",
+            "url": "https://test.dme-cg.com/reports/pdf/ea/journey/persona/System%20Admin%20Journey/1/0/48/?ts=1623005570&;amp;sig=ubR0oQ%2F7TjfZyjbhH%2FJGavHD9T8%3D"
+          }
+        ]
     }
   ]
 }
